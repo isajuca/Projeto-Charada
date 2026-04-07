@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="logo.png" type="image/png">
+    <title>DestravaMente</title>
+</head>
+<body class="bg-blue-100 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div class="flex items-center mb-12">
+        <img src="logo.png" alt="Logo" width="100px" class="mr-4">
+        <h1 class="text-3xl text-blue-400 font-bold">DestravaMente</h1>
+    </div>
+
+    <div class="w-full max-w-5xl flex flex-col md:flex-row items-start justify-center gap-6">
+        <div class="group w-full md:w-1/2 max-w-sm [perspective:1000px] h-64">
+            <div id="card-inner" class="relative w-full h-full transition-all duration-500 [transform-style:preserve-3d] cursor-pointer shadow-2xl rounded-2xl">
+               
+                <div class="absolute inset-0 [backface-visibility:hidden] bg-white rounded-2xl flex flex-col items-center justify-center p-6 text-center border-2 border-blue-300">
+                    <span class="text-blue-300 font-bold uppercase tracking-widest text-xs mb-2">Pergunta</span>
+                    <p id="pergunta" class="text-xl font-medium text-gray-800 italic">Carregando charada...</p>
+                    <p class="mt-4 text-gray-400 text-xs font-light">Clique para ver a resposta</p>
+                </div>
+
+                <div class="absolute inset-0 [backface-visibility:hidden] bg-blue-300 rounded-2xl flex flex-col items-center justify-center p-6 text-center text-white [transform:rotateY(180deg)]">
+                    <span class="text-white-200 font-bold uppercase tracking-widest text-xs mb-2">Resposta</span>
+                    <p id="resposta" class="text-2xl font-bold"></p>
+                </div>
+            </div>
+            <button id="btn-nova" class="mt-4 w-full bg-blue-300 hover:bg-blue-400 text-white font-bold py-3 rounded-full transition-transform active:scale-95 shadow-lg">
+                Nova Charada 🎲
+            </button>
+        </div>
+
+        <div class="w-full md:w-1/2 max-w-sm flex flex-col gap-4 md:mt-10">
+            <div class="bg-white rounded-2xl p-4 shadow-md">
+                <p class="text-xs uppercase tracking-widest text-blue-400 mb-3">Placar</p>
+                <div class="grid grid-cols-2 gap-4 text-center">
+                    <div class="rounded-2xl bg-green-50 py-4">
+                        <p id="pontos-acerto" class="text-3xl font-bold text-green-600">0</p>
+                        <p class="text-xs uppercase tracking-widest text-gray-500">Acertos</p>
+                    </div>
+                    <div class="rounded-2xl bg-red-50 py-4">
+                        <p id="pontos-erro" class="text-3xl font-bold text-red-600">0</p>
+                        <p class="text-xs uppercase tracking-widest text-gray-500">Erros</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-4">
+                <button id="btn-acerto" class="flex-1 bg-green-300 hover:bg-green-600 text-white font-bold py-3 rounded-full transition-transform active:scale-95 shadow-lg">
+                    Acertei ✅
+                </button>
+                <button id="btn-erro" class="flex-1 bg-red-300 hover:bg-red-600 text-white font-bold py-3 rounded-full transition-transform active:scale-95 shadow-lg">
+                    Errei ❌
+                </button>
+            </div>
+
+            <button id="btn-reset" class="w-full bg-gray-400 hover:bg-gray-500 text-white font-bold py-3 rounded-full transition-transform active:scale-95 shadow-lg">
+                Resetar Placar 🔄
+            </button>
+        </div>
+    </div>
+    <footer class="mt-16 text-center text-gray-500 text-md">
+        &copy; 2026 DestravaMente. Seja honesto com você mesmo.
+    </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
