@@ -34,7 +34,7 @@ DestravaMente é um jogo de charadas em formato de card interativo. O usuário v
 ## Links
 
 ### 🎮 Quer jogar?
-- **Projeto completo**: https://projeto-charada.vercel.app
+- **Projeto completo**: https://projeto-charada-one.vercel.app/
 
 ### 🔌 Quer conhecer a API?
 - **API de Charadas**: https://api-charadas-five.vercel.app
