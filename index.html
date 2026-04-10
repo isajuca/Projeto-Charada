@@ -14,8 +14,22 @@
         <h1 class="text-3xl text-blue-400 font-bold">DestravaMente</h1>
     </div>
 
-    <div class="w-full max-w-5xl flex flex-col md:flex-row items-start justify-center gap-6">
-        <div class="group w-full md:w-1/2 max-w-sm [perspective:1000px] h-64">
+    <div class="w-full max-w-5xl flex flex-col items-center gap-6">
+        <div class="bg-white rounded-2xl p-3 shadow-md w-full max-w-sm">
+            <p class="text-xs uppercase tracking-widest text-blue-400 mb-2">Placar</p>
+            <div class="grid grid-cols-2 gap-3 text-center">
+                <div class="rounded-2xl bg-green-50 py-2">
+                    <p id="pontos-acerto" class="text-2xl font-bold text-green-600">0</p>
+                    <p class="text-xs uppercase tracking-widest text-gray-500">Acertos</p>
+                </div>
+                <div class="rounded-2xl bg-red-50 py-2">
+                    <p id="pontos-erro" class="text-2xl font-bold text-red-600">0</p>
+                    <p class="text-xs uppercase tracking-widest text-gray-500">Erros</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="group w-full max-w-sm [perspective:1000px] h-64">
             <div id="card-inner" class="relative w-full h-full transition-all duration-500 [transform-style:preserve-3d] cursor-pointer shadow-2xl rounded-2xl">
                
                 <div class="absolute inset-0 [backface-visibility:hidden] bg-white rounded-2xl flex flex-col items-center justify-center p-6 text-center border-2 border-blue-300">
@@ -40,32 +54,17 @@
                     </div>
                 </div>
             </div>
-            <button id="btn-nova" class="mt-4 w-full bg-blue-300 hover:bg-blue-400 text-white font-bold py-3 rounded-full transition-transform active:scale-95 shadow-lg">
-                Nova Charada 🎲
-            </button>
-        </div>
-
-        <div class="w-full md:w-1/2 max-w-sm flex flex-col gap-4 md:mt-10">
-            <div class="bg-white rounded-2xl p-4 shadow-md">
-                <p class="text-xs uppercase tracking-widest text-blue-400 mb-3">Placar</p>
-                <div class="grid grid-cols-2 gap-4 text-center">
-                    <div class="rounded-2xl bg-green-50 py-4">
-                        <p id="pontos-acerto" class="text-3xl font-bold text-green-600">0</p>
-                        <p class="text-xs uppercase tracking-widest text-gray-500">Acertos</p>
-                    </div>
-                    <div class="rounded-2xl bg-red-50 py-4">
-                        <p id="pontos-erro" class="text-3xl font-bold text-red-600">0</p>
-                        <p class="text-xs uppercase tracking-widest text-gray-500">Erros</p>
-                    </div>
-                </div>
+            <div class="mt-4 flex gap-4">
+                <button id="btn-nova" class="flex-1 bg-blue-300 hover:bg-blue-400 text-white font-bold py-2 rounded-full transition-transform active:scale-95 shadow-lg">
+                    Nova Charada 🎲
+                </button>
+                <button id="btn-reset" class="flex-1 bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 rounded-full transition-transform active:scale-95 shadow-lg">
+                    Resetar Placar 🔄
+                </button>
             </div>
-
-            <button id="btn-reset" class="w-full bg-gray-400 hover:bg-gray-500 text-white font-bold py-3 rounded-full transition-transform active:scale-95 shadow-lg">
-                Resetar Placar 🔄
-            </button>
         </div>
     </div>
-    <footer class="mt-16 text-center text-gray-500 text-md">
+    <footer class="mt-24 text-center text-gray-500 text-md">
         &copy; 2026 DestravaMente. Seja honesto com você mesmo.
     </footer>
 
