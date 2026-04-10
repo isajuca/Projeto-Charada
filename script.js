@@ -44,7 +44,8 @@ async function buscaCharada() {
 // 4. Eventos (O que acontece quando clicamos)
 
 // Giro do Card
-cardInner.addEventListener('click', () => {
+cardInner.addEventListener('click', (event) => {
+    if (event.target.closest('button')) return;
     cardInner.classList.toggle(CLASSE_GIRO);
 });
 
